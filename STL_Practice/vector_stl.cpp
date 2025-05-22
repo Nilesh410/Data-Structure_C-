@@ -58,5 +58,21 @@ int main()
         cout<<value<<" ";
     }
     cout<<endl;
+
+    //8. at() element at particular index
+    cout<<number.at(2);
+     cout<<endl;
+    //9. pop() remove the elmenets from last
+    number.pop_back();
+    for(auto value:number)
+    {
+        cout<<value<<" ";
+    }
+    cout<<endl;
+
+    //10. clear function 
+    cout<<"Before clear vector size:"<<number.size()<<endl;
+    number.clear();
+    cout<<"After clear vector size:"<<number.size()<<endl;
       return 0;
 }
