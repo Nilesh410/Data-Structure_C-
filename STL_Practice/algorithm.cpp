@@ -64,5 +64,11 @@ int main()
     for(auto num:arr1)
         cout<<num<<" ";
     cout<<endl;
+
+    //upper bound 
+    auto it=lower_bound(arr.begin(),arr.end(),22);
+    cout<<"lower_bound="<<*it;
+    auto it1=upper_bound(arr.begin(),arr.end(),22);
+    cout<<"upper_bound="<<*it1;
     return 0;
 }
