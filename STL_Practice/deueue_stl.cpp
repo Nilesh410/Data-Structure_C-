@@ -1,3 +1,4 @@
+//Deque:- Insertion and deletion from both the end of the queue
 #include<iostream>
 #include<deque>
 

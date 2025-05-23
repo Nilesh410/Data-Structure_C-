@@ -1,0 +1,1 @@
+cout<<"capacity of list:"<<li.capacity()<<endl;
