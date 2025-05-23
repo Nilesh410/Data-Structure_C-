@@ -75,4 +75,5 @@ int main()
     number.clear();
     cout<<"After clear vector size:"<<number.size()<<endl;
       return 0;
+      
 }
