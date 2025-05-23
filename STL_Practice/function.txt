@@ -1,0 +1,15 @@
+List of function to use or perform the oepration on container
+create 
+push_back()
+push_front()
+pop_front()
+pop_back()
+front()
+back()
+begins()
+end()
+insert(range or index)
+erase()
+clear()
+size()
+empty()
