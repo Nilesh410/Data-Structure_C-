@@ -2,12 +2,12 @@
 using namespace std;
 class node
 {
-    public: int data;
-            node *next;
-            node()
-            {
-                next=NULL;
-            }
+public: int data;
+        node *next;
+        node()
+        {
+            next=NULL;
+        }
 };
 class Linked_List
 {
@@ -70,7 +70,7 @@ class Linked_List
                  head=temp->next;
                  delete temp;
             }
-             void delete_last()
+            void delete_last()
             {
                 node * temp=head;
                 if(head==NULL)
@@ -108,6 +108,10 @@ class Linked_List
                 }
                 prev->next=temp->next;
                 delete temp;
+            }
+            void search(int search_ele)
+            {
+
             }
 };
 int main()
