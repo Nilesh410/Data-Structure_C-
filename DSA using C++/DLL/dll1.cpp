@@ -34,16 +34,59 @@ class DLL
                     temp->prev=t1;
                   }
             }
-};
+            void insert_at_begin(int data)
+            {
+                Node * temp=new Node(data);
+                if(head==NULL)
+                    head=temp;
+                else
+                {
+                    temp->next=head;
+                    head->prev=temp;
+                    head=temp;
+                }
+            }
+            void insert_at_middle(int data,int position)
+            {
+                Node *temp =new Node(data);
+                Node *ptr=head;
+                Node *prev=NULL;
+                while(ptr!=NULL&&ptr->value!=position)
+                {
+                    prev=ptr;
+                    ptr=ptr->next;
+                }
+                if(ptr==NULL)
+                    cout<<"Invalid position";
+                else
+                {
+                    prev->next=temp;
+                    temp->next=ptr;
+                    ptr->prev=temp;
+                }        
+            }
+            void display()
+            {
+                Node *ptr=head;
+                while(ptr!=NULL)
+                {
+                    cout<<ptr->value<<"-><-";
+                    ptr=ptr->next;
+                }
+            }
+        };
 int main()
 {
-    int num,choice,ch;
+    int num,choice,ch,position;
     cout<<"Created empty double linked list"<<endl;
     DLL d1;
     do
     {
         cout<<"Operation List"<<endl;
         cout<<"1.Insert at end"<<endl;
+        cout<<"2.Insert at Begining"<<endl;
+        cout<<"3.Insert at Middle"<<endl;
+        cout<<"4.Display"<<endl;
         cout<<"Select the operations=>";
         cin>>choice;
         switch(choice)
@@ -51,10 +94,26 @@ int main()
             case 1:cout<<"Enter the number to insert=>";
                    cin>>num;
                    d1.insert_at_last(num);
+                   d1.display();
                    break;
+            case 2:cout<<"Enter the number to insert=>";
+                   cin>>num;
+                   d1.insert_at_begin(num);
+                   d1.display();
+                   break;
+            case 3:cout<<"Enter the number to insert=>";
+                   cin>>num;
+                   cout<<"Enter the position=>";
+                   cin>>position;
+                   d1.insert_at_middle(num,position);
+                   d1.display();
+                   break;
+            case 4:d1.display();
+                    break;
             default:cout<<"Invalid operation"<<endl;
                     break;
         }
+        cout<<endl;
         cout<<"Do you want to continue then press 1 otherwise 0:=>";
         cin>>ch;
     } while (ch!=0);
