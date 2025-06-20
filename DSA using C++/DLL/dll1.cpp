@@ -74,6 +74,53 @@ class DLL
                     ptr=ptr->next;
                 }
             }
+            void delete_at_first()
+            {
+                Node *ptr=head;
+                if(head==NULL)
+                    cout<<"DLL is empty";
+                else
+                {
+                    head=ptr->next;
+                    head->prev=NULL;
+                    delete ptr;
+                }
+               
+            }
+            void delete_at_last()
+            {
+                Node *ptr=head;
+                if(head==NULL)
+                    cout<<"DLL is empty";
+                else
+                {
+                    while(ptr->next->next!=NULL)
+                    {
+                        ptr=ptr->next;
+                    }
+                    ptr->next=NULL;
+                    display();
+                }
+            }
+            void delete_at_middle(int data)
+            {
+                Node* ptr=head;
+                Node* prev1=NULL;
+                Node* fwd=ptr->next;
+                if(head==NULL)
+                    cout<<"DLL is empty";
+                else
+                {
+                    while(ptr->value!=data)
+                    {
+                        prev1=ptr;
+                        ptr=ptr->next;
+                        fwd=fwd->next;
+                    }
+                    prev1->next=ptr->next;
+                    fwd->prev=prev1;
+                }
+            }
         };
 int main()
 {
@@ -87,6 +134,9 @@ int main()
         cout<<"2.Insert at Begining"<<endl;
         cout<<"3.Insert at Middle"<<endl;
         cout<<"4.Display"<<endl;
+        cout<<"5.Delete_at_first"<<endl;
+        cout<<"6.Delete_at_last"<<endl;
+        cout<<"7.Delete_at_middle"<<endl;
         cout<<"Select the operations=>";
         cin>>choice;
         switch(choice)
@@ -110,6 +160,16 @@ int main()
                    break;
             case 4:d1.display();
                     break;
+            case 5:d1.delete_at_first();
+                   d1.display();
+                   break;
+            case 6:d1.delete_at_last();
+                   break;
+            case 7:cout<<"Select the node to delete=>";
+                   cin>>num;
+                   d1.delete_at_middle(num);
+                   d1.display();
+                   break;
             default:cout<<"Invalid operation"<<endl;
                     break;
         }
