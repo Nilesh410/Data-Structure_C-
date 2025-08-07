@@ -4,8 +4,8 @@
 using namespace std;
 int main()
 {
-    vector <int> number={10,15,7,5,25};
-
+    //vector <int> number={10,15,7,5,25};
+    vector <int> number;
     // for(int data:number)
     // {
     //     cout<<data<<" ";
