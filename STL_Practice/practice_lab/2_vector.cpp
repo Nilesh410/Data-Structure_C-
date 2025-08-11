@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int main()
@@ -41,7 +42,7 @@ int main()
     cout<<"Begin element address="<<*(value_begin)<<endl;
     cout<<"Last element address="<<*(v1.end())<<endl;
 
-   //6.Ineert and delete using begin
+   //6.Insert and delete using begin
    v1.insert(v1.begin()+1,65);
    for(int i:v1)
     {
@@ -55,7 +56,7 @@ int main()
     {
         cout<<i<<" ";
     }
-    
+    cout<<search(v1,45);
     cout<<endl;
     return 0;
 }

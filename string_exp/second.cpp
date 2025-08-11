@@ -1,12 +1,10 @@
 #include<iostream>
-#include<stack>
+
 using namespace std;
 int main()
 {
     string str="hello programmer";
-    stack <string>st;
-    str+=" ";
-    string temp="";
+
   
     int num[26]={0};
     for(int i=0;i<str.length();i++)

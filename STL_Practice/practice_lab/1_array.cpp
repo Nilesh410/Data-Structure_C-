@@ -28,6 +28,8 @@ int main()
      cout<<"---Beign and end---"<<endl;
     cout<<"array begin="<<arr.begin()<<endl;
     cout<<"array end="<<arr.end()<<endl;
+    int arr1[3];
+
 
     //size of array
     cout<<"size of array---"<<endl;
