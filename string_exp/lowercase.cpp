@@ -6,6 +6,7 @@ int main()
     for(auto&c:s)
     {
         c=(char)tolower(c);
+        cout<<c<<" ";
     }
     cout<<s;
     return 0;
